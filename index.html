@@ -115,10 +115,18 @@
             <select class="form-select" aria-label="Selccionar una opción" id="lbl-parentesco" name="parentesco">
               <option selected>Selccionar una opción</option>
               <option value="titular">Titular</option>
-              <option value="hijo/a">Hijo/a</option>
+              <option value="hijo">Hijo/a</option>
               <option value="conyuge">Cónyuge</option>
             </select>
           </section>
+          <section class="col-12 col-lg-6 mb-lg-4 nombreDenunciante d-none">
+            <label for="lbl-denunciante" class="form-label">Nombres completo del denunciante *</label>
+            <input type="text" id="lbl-denunciante" class="form-control" placeholder="Escribir nombre del denunciante" name="nombreDenunciante">
+          </section>
+            <section class="col-12 col-lg-6 mb-lg-4 cuilDenunciante d-none">
+              <label for="lbl-cuilDenunciante" class="form-label">CUIL denunciante *</label>
+              <input type="text" id="lbl-cuilDenunciante" class="form-control" placeholder="Escribir nombres del afectado/a" name="cuilDenunciante">
+            </section>
           <section class="col-12 d-flex flex-column align-items-center">
             <label for="lbl-situacion" class="form-label">Explique situación *</label>
             <textarea class="form-control" id="lbl-situacion" rows="9" placeholder="Explique la situación lo más detallada posible" name="situacion"></textarea>
