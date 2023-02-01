@@ -3,6 +3,7 @@
 :root{
   --font-principal: 'Roboto', sans-serif;
   --bg-prinicpal: linear-gradient(to bottom, #2052AA, #56a7e1);
+  --color-check: #2052AA;
 }
 
 body{
@@ -25,6 +26,19 @@ h1{
 
 label, h1{
   color: #fff;
+}
+
+/* Modal formulario */
+.container_check{
+  width: 100px;
+  height: 100px;
+  border: thin solid #ccc;
+  border-radius: 50%;
+}
+
+.container_check i{
+  font-size: 4rem;
+  color: var(--color-check);
 }
 
 @media screen and (min-width:720px){
