@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/img/favicon-ipsst-32x32.png" type="image/x-icon">
+  <!-- Bootsrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- Mi CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Formulario de Denuncia - IPSST por Nicolas Francisco Cabrera</title>
+</head>
+<body>
+  <!-- ### NAVEGACION #### -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/img/logo.gif" alt="">
+        IPSST</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Volver al sitio principal</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--### HEADER ### -->
+  <header>
+    <h1 class="text-center border-top border-bottom w-25 mx-auto mt-4 mb-4">DENUNCIAS</h1>
+  </header>
+
+  <!-- ## FORMULARIO ## -->
+  <section class="">
+    <div class="container">
+      <form class="container_formulario mx-auto">
+        <div class="row gap-2 gap-lg-0">
+          <section class="col-12 col-lg-6">
+            <label for="lbl-nombre" class="form-label">Nombres del afectado *</label>
+            <input type="text" id="lbl-nombre" class="form-control" placeholder="Escribir nombres del afectado/a">
+          </section>
+          <section class="col-12 col-lg-6">
+            <label for="lbl-apellido" class="form-label">Apellidos del afectado *</label>
+            <input type="text" id="lbl-apellido" class="form-control" placeholder="Escribir apellidos del afectado/a">
+          </section>
+          <section class="col-12 col-lg-6">
+            <label for="lbl-email" class="form-label">Email *</label>
+            <input type="email" id="lbl-email" class="form-control" placeholder="Introduzca email" pattern="">
+          </section>
+          <section class="col-12 col-lg-6">
+            <label for="lbl-cuil" class="form-label">Cuil *</label>
+            <input type="number" id="lbl-cuil" class="form-control" placeholder="Introducir número de cuil">
+          </section>
+          <section class="col-12 col-lg-6">
+            <label for="lbl-celular" class="form-label">Telefono celular *</label>
+            <input type="number" id="lbl-celular" class="form-control" placeholder="Introducir numero de celular">
+          </section>
+          <section class="col-12 col-lg-6">
+            <label for="lbl-fijo" class="form-label">Telefono fijo <small>(opcional)</small></label>
+            <input type="number" id="lbl-fijo" class="form-control" placeholder="Introducir numero telefono fijo (opcional)">
+          </section>
+          <section class="col-12 col-lg-6">
+            <label for="lbl-horario" class="form-label">Indicar horario donde podemos llamarlo *</label>
+             <select class="form-select" aria-label="Default select example" id="lbl-horario">
+               <option selected>Selccionar un horario</option>
+               <option value="8-14">8hs - 14hs</option>
+               <option value="14-17">14hs - 17hs</option>
+               <option value="17-21">17hs - 21hs</option>
+             </select>
+          </section>
+          <section class="col-12 col-lg-6">
+            <label for="lbl-localidad" class="form-label">Localidad *</label>
+             <select class="form-select" aria-label="Default select example" id="lbl-localidad">
+               <option selected>Selccionar localidad</option>
+               <option value="smt">San Miguel de Tucuman</option>
+               <option value="lules">Lules</option>
+               <option value="famailla">Famailla</option>
+               <option value="bella-vista">Bella Vista</option>
+               <option value="yb">Yerba Buena</option>
+               <option value="tafi-viejo">Tafi Viejo</option>
+               <option value="bdrs">Banda del Rio Salí</option>
+               <option value="alderetes">Alderetes</option>
+               <option value="simoca">Simoca</option>
+               <option value="monteros">Monteros</option>
+               <option value="concepcion">Concepción</option>
+               <option value="aguilares">Aguilares</option>
+               <option value="alberdi">Alberdi</option>
+               <option value="trancas">Trancas</option>
+               <option value="tf-valle">Tafi del valle</option>
+               <option value="la-cocha">La Cocha</option>
+               <option value="a-valle">Amaicha del valle</option>
+             </select>
+          </section>
+          <section class="col-12 col-lg-6">
+            <label for="lbl-denuncia" class="form-label">Tipo de denuncia *</label>
+            <select class="form-select" aria-label="Default select example" id="lbl-denuncia">
+              <option selected>Selccionar una opción</option>
+              <option value="8-14">Desconocimiento de consumos realizados.</option>
+              <option value="14-17">14hs - 17hs</option>
+              <option value="17-21">17hs - 21hs</option>
+            </select>
+          </section>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

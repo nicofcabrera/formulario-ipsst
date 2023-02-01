@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root{
+  --font-principal: 'Roboto', sans-serif;
+  --bg-prinicpal: linear-gradient(to bottom, #2052AA, #56a7e1);
+}
+
+body{
+  font-family: var(--font-principal);
+  background: var(--bg-prinicpal);
+}
+
+/* HEADER */
+
+/* FORMULARIO */
+.container_formulario{
+  max-width: 700px;
+}
