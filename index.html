@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Formulario de Denuncia - IPSST por Nicolas Francisco Cabrera</title>
 </head>
-<body>
+<body class="pb-4">
   <!-- ### NAVEGACION #### -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -34,42 +34,42 @@
   </nav>
 
   <!--### HEADER ### -->
-  <header>
-    <h1 class="text-center border-top border-bottom w-25 mx-auto mt-4 mb-4">DENUNCIAS</h1>
+  <header class="pt-2 d-flex justify-content-center">
+    <h1 class="text-center border-top border-bottom mt-4 mb-4">DENUNCIA</h1>
   </header>
 
   <!-- ## FORMULARIO ## -->
-  <section class="">
+  <section class="p-4">
     <div class="container">
       <form class="container_formulario mx-auto">
-        <div class="row gap-2 gap-lg-0">
-          <section class="col-12 col-lg-6">
+        <div class="row gap-4 gap-lg-0">
+          <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-nombre" class="form-label">Nombres del afectado *</label>
-            <input type="text" id="lbl-nombre" class="form-control" placeholder="Escribir nombres del afectado/a">
+            <input type="text" id="lbl-nombre" class="form-control" placeholder="Escribir nombres del afectado/a" name="nombres">
           </section>
           <section class="col-12 col-lg-6">
             <label for="lbl-apellido" class="form-label">Apellidos del afectado *</label>
-            <input type="text" id="lbl-apellido" class="form-control" placeholder="Escribir apellidos del afectado/a">
+            <input type="text" id="lbl-apellido" class="form-control" placeholder="Escribir apellidos del afectado/a" name="apellidos">
           </section>
-          <section class="col-12 col-lg-6">
+          <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-email" class="form-label">Email *</label>
-            <input type="email" id="lbl-email" class="form-control" placeholder="Introduzca email" pattern="">
+            <input type="email" id="lbl-email" class="form-control" placeholder="Introduzca email" pattern="" name="email">
           </section>
           <section class="col-12 col-lg-6">
             <label for="lbl-cuil" class="form-label">Cuil *</label>
-            <input type="number" id="lbl-cuil" class="form-control" placeholder="Introducir número de cuil">
+            <input type="number" id="lbl-cuil" class="form-control" placeholder="Introducir número de cuil" name="cuil">
           </section>
-          <section class="col-12 col-lg-6">
+          <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-celular" class="form-label">Telefono celular *</label>
-            <input type="number" id="lbl-celular" class="form-control" placeholder="Introducir numero de celular">
+            <input type="number" id="lbl-celular" class="form-control" placeholder="Introducir numero de celular" name="celular">
           </section>
           <section class="col-12 col-lg-6">
             <label for="lbl-fijo" class="form-label">Telefono fijo <small>(opcional)</small></label>
-            <input type="number" id="lbl-fijo" class="form-control" placeholder="Introducir numero telefono fijo (opcional)">
+            <input type="number" id="lbl-fijo" class="form-control" placeholder="Introducir numero telefono fijo (opcional)" name="fijo">
           </section>
-          <section class="col-12 col-lg-6">
+          <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-horario" class="form-label">Indicar horario donde podemos llamarlo *</label>
-             <select class="form-select" aria-label="Default select example" id="lbl-horario">
+             <select class="form-select" aria-label="Selccionar un horario" id="lbl-horario" name="horario">
                <option selected>Selccionar un horario</option>
                <option value="8-14">8hs - 14hs</option>
                <option value="14-17">14hs - 17hs</option>
@@ -78,7 +78,7 @@
           </section>
           <section class="col-12 col-lg-6">
             <label for="lbl-localidad" class="form-label">Localidad *</label>
-             <select class="form-select" aria-label="Default select example" id="lbl-localidad">
+             <select class="form-select" aria-label="Selccionar localidad" id="lbl-localidad" name="localidad">
                <option selected>Selccionar localidad</option>
                <option value="smt">San Miguel de Tucuman</option>
                <option value="lules">Lules</option>
@@ -99,14 +99,32 @@
                <option value="a-valle">Amaicha del valle</option>
              </select>
           </section>
-          <section class="col-12 col-lg-6">
+          <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-denuncia" class="form-label">Tipo de denuncia *</label>
-            <select class="form-select" aria-label="Default select example" id="lbl-denuncia">
+            <select class="form-select" aria-label="Seleccionar una opción" id="lbl-denuncia" name="tipo">
               <option selected>Selccionar una opción</option>
-              <option value="8-14">Desconocimiento de consumos realizados.</option>
-              <option value="14-17">14hs - 17hs</option>
-              <option value="17-21">17hs - 21hs</option>
+              <option value="desconocimientoConsumo">Desconocimiento de consumos realizados.</option>
+              <option value="medicamentos">Problemas con farmacias/medicamentos</option>
+              <option value="plus">Cobro indebido de plus</option>
+              <option value="otros">Inconveniente con una atención médica o algun trámite en la obra social.</option>
+              <option value="otros">Mala atención en la obra social y/o consultorios médicos.</option>
             </select>
+          </section>
+          <section class="col-12 col-lg-6">
+            <label for="lbl-parentesco" class="form-label">El afiliado/a, ¿es el titular de la obra social? *</label>
+            <select class="form-select" aria-label="Selccionar una opción" id="lbl-parentesco" name="parentesco">
+              <option selected>Selccionar una opción</option>
+              <option value="titular">Titular</option>
+              <option value="hijo/a">Hijo/a</option>
+              <option value="conyuge">Cónyuge</option>
+            </select>
+          </section>
+          <section class="col-12 d-flex flex-column align-items-center">
+            <label for="lbl-situacion" class="form-label">Explique situación *</label>
+            <textarea class="form-control" id="lbl-situacion" rows="9" placeholder="Explique la situación lo más detallada posible" name="situacion"></textarea>
+          </section>
+          <section class="d-flex justify-content-center mt-5">
+            <button class="btn btn-primary boton_enviar" type="button">Enviar</button>
           </section>
         </div>
       </form>
