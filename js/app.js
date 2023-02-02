@@ -21,10 +21,10 @@ afectado.addEventListener('change', () => {
 
 // Otra idea de función es si existe tal variable creando nodos **probar en otro momento**
 
-// Funcion para envio de form
-
+// Funcion para el MODAL cuando envio form
 const submitForm = () => {
   const modalEnviar = document.getElementById('exampleModal')
-  modalEnviar.classList.add('show','d-block')
-
+  const capaOpacity = document.querySelector('.modal-backdrop')
+  capaOpacity.classList.replace('d-none','d-block')
+  modalEnviar.classList.add('show', 'd-block')
 }
