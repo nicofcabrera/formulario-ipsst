@@ -14,11 +14,11 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Formulario de Denuncia - IPSST por Nicolas Francisco Cabrera</title>
 </head>
-<body class="pb-4">
+<body>
   <!-- ### NAVEGACION #### -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand ipsst_ancla" href="#">
         <img src="/img/logo.gif" alt="">
         IPSST</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -26,9 +26,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Volver al sitio principal</a>
+            <a class="nav-link active text-decoration-underline" aria-current="page" href="#">Volver al sitio principal</a>
           </li>
         </ul>
       </div>
@@ -41,29 +41,29 @@
   </header>
 
   <!-- ## FORMULARIO ## -->
-  <section class="p-4">
+  <main class="p-5">
     <div class="container">
       <form class="container_formulario mx-auto">
         <div class="row gap-4 gap-lg-0">
           <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-nombre" class="form-label">Nombres del afectado *</label>
-            <input type="text" id="lbl-nombre" class="form-control" placeholder="Escribir nombres del afectado/a" name="nombres">
+            <input type="text" id="lbl-nombre" class="form-control" placeholder="Escribir nombres del afectado/a" name="nombres" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" minlength="3" maxlength="30" required>
           </section>
           <section class="col-12 col-lg-6">
             <label for="lbl-apellido" class="form-label">Apellidos del afectado *</label>
-            <input type="text" id="lbl-apellido" class="form-control" placeholder="Escribir apellidos del afectado/a" name="apellidos">
+            <input type="text" id="lbl-apellido" class="form-control" placeholder="Escribir apellidos del afectado/a" name="apellidos" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" minlength="3" maxlength="30" required>
           </section>
           <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-email" class="form-label">Email *</label>
-            <input type="email" id="lbl-email" class="form-control" placeholder="Introduzca email" pattern="" name="email">
+            <input type="email" id="lbl-email" class="form-control" placeholder="Introduzca email" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" name="email" required>
           </section>
           <section class="col-12 col-lg-6">
             <label for="lbl-cuil" class="form-label">Cuil *</label>
-            <input type="number" id="lbl-cuil" class="form-control" placeholder="Introducir número de cuil" name="cuil">
+            <input type="number" id="lbl-cuil" class="form-control" placeholder="Introducir número de cuil" name="cuil" required>
           </section>
           <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-celular" class="form-label">Telefono celular *</label>
-            <input type="number" id="lbl-celular" class="form-control" placeholder="Introducir numero de celular" name="celular">
+            <input type="number" id="lbl-celular" class="form-control" placeholder="Introducir numero de celular" name="celular" required>
           </section>
           <section class="col-12 col-lg-6">
             <label for="lbl-fijo" class="form-label">Telefono fijo <small>(opcional)</small></label>
@@ -71,8 +71,8 @@
           </section>
           <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-horario" class="form-label">Indicar horario donde podemos llamarlo *</label>
-             <select class="form-select" aria-label="Selccionar un horario" id="lbl-horario" name="horario">
-               <option selected>Selccionar un horario</option>
+             <select class="form-select" aria-label="Selccionar un horario" id="lbl-horario" name="horario" required>
+               <option value="" selected>Selccionar un horario</option>
                <option value="8-14">8hs - 14hs</option>
                <option value="14-17">14hs - 17hs</option>
                <option value="17-21">17hs - 21hs</option>
@@ -80,8 +80,8 @@
           </section>
           <section class="col-12 col-lg-6">
             <label for="lbl-localidad" class="form-label">Localidad *</label>
-             <select class="form-select" aria-label="Selccionar localidad" id="lbl-localidad" name="localidad">
-               <option selected>Selccionar localidad</option>
+             <select class="form-select" aria-label="Selccionar localidad" id="lbl-localidad" name="localidad" required>
+               <option value="" selected>Selccionar localidad</option>
                <option value="smt">San Miguel de Tucuman</option>
                <option value="lules">Lules</option>
                <option value="famailla">Famailla</option>
@@ -103,8 +103,8 @@
           </section>
           <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-denuncia" class="form-label">Tipo de denuncia *</label>
-            <select class="form-select" aria-label="Seleccionar una opción" id="lbl-denuncia" name="tipo">
-              <option selected>Selccionar una opción</option>
+            <select class="form-select" aria-label="Seleccionar una opción" id="lbl-denuncia" name="tipo" required>
+              <option value="" selected>Selccionar una opción</option>
               <option value="desconocimientoConsumo">Desconocimiento de consumos realizados.</option>
               <option value="medicamentos">Problemas con farmacias/medicamentos</option>
               <option value="plus">Cobro indebido de plus</option>
@@ -114,8 +114,8 @@
           </section>
           <section class="col-12 col-lg-6 lala">
             <label for="lbl-parentesco" class="form-label">El afiliado/a, ¿es el titular de la obra social? *</label>
-            <select class="form-select" aria-label="Selccionar una opción" id="lbl-parentesco" name="parentesco">
-              <option selected>Selccionar una opción</option>
+            <select class="form-select" aria-label="Selccionar una opción" id="lbl-parentesco" name="parentesco" required>
+              <option value="" selected>Selccionar una opción</option>
               <option value="titular">Titular</option>
               <option value="hijo">Hijo/a</option>
               <option value="conyuge">Cónyuge</option>
@@ -123,23 +123,24 @@
           </section>
           <section class="col-12 col-lg-6 mb-lg-4 nombreDenunciante d-none">
             <label for="lbl-denunciante" class="form-label">Nombres completo del denunciante *</label>
-            <input type="text" id="lbl-denunciante" class="form-control" placeholder="Escribir nombre del denunciante" name="nombreDenunciante">
+            <input type="text" id="lbl-denunciante" class="form-control" placeholder="Escribir nombre del denunciante" name="nombreDenunciante" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
           </section>
             <section class="col-12 col-lg-6 mb-lg-4 cuilDenunciante d-none">
               <label for="lbl-cuilDenunciante" class="form-label">CUIL denunciante *</label>
-              <input type="text" id="lbl-cuilDenunciante" class="form-control" placeholder="Escribir nombres del afectado/a" name="cuilDenunciante">
+              <input type="number" id="lbl-cuilDenunciante" class="form-control" placeholder="Escribir nombres del afectado/a" name="cuilDenunciante" required>
             </section>
           <section class="col-12 d-flex flex-column align-items-center">
             <label for="lbl-situacion" class="form-label">Explique situación *</label>
-            <textarea class="form-control" id="lbl-situacion" rows="9" placeholder="Explique la situación lo más detallada posible" name="situacion"></textarea>
+            <textarea class="form-control" id="lbl-situacion" rows="9" placeholder="Explique la situación brevemente" name="situacion" minlength="10" maxlength="800" required></textarea>
           </section>
         </div>
           <section class="d-flex justify-content-center mt-5">
-            <button class="btn btn-primary boton_enviar" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button>
+            <!-- <button class="btn btn-primary boton_enviar" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button> -->
+            <button class="btn btn-primary boton_enviar" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button>
           </section>
       </form>
     </div>
-  </section>
+  </main>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <section class="modal-dialog modal-dialog-centered">
@@ -163,6 +164,12 @@
       </div>
     </section>
   </div>
+  <footer class="container_footer text-center py-3 mt-4">
+    <p class="text-white">&copy Diseñado y desarrollado por Cabrera Nicolas Francisco </p>
+    <a href="#" class="text-white text-decoration-none">
+      <i class="bi bi-github"></i>
+    </a>
+  </footer>
 
 
 
