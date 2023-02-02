@@ -43,7 +43,7 @@
   <!-- ## FORMULARIO ## -->
   <main class="p-5">
     <div class="container">
-      <form class="container_formulario mx-auto">
+      <form class="container_formulario mx-auto" method="get" action="#" onsubmit="submitForm()">
         <div class="row gap-4 gap-lg-0">
           <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-nombre" class="form-label">Nombres del afectado *</label>
@@ -121,14 +121,14 @@
               <option value="conyuge">Cónyuge</option>
             </select>
           </section>
-          <section class="col-12 col-lg-6 mb-lg-4 nombreDenunciante d-none">
+          <section class="d-none col-12 col-lg-6 mb-lg-4 nombreDenunciante">
             <label for="lbl-denunciante" class="form-label">Nombres completo del denunciante *</label>
             <input type="text" id="lbl-denunciante" class="form-control" placeholder="Escribir nombre del denunciante" name="nombreDenunciante" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
           </section>
-            <section class="col-12 col-lg-6 mb-lg-4 cuilDenunciante d-none">
-              <label for="lbl-cuilDenunciante" class="form-label">CUIL denunciante *</label>
-              <input type="number" id="lbl-cuilDenunciante" class="form-control" placeholder="Escribir nombres del afectado/a" name="cuilDenunciante" required>
-            </section>
+          <section class="d-none col-12 col-lg-6 mb-lg-4 cuilDenunciante ">
+            <label for="lbl-cuilDenunciante" class="form-label">CUIL denunciante *</label>
+            <input type="number" id="lbl-cuilDenunciante" class="form-control" placeholder="Escribir nombres del afectado/a" name="cuilDenunciante" required>
+          </section>
           <section class="col-12 d-flex flex-column align-items-center">
             <label for="lbl-situacion" class="form-label">Explique situación *</label>
             <textarea class="form-control" id="lbl-situacion" rows="9" placeholder="Explique la situación brevemente" name="situacion" minlength="10" maxlength="800" required></textarea>
@@ -136,7 +136,7 @@
         </div>
           <section class="d-flex justify-content-center mt-5">
             <!-- <button class="btn btn-primary boton_enviar" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button> -->
-            <button class="btn btn-primary boton_enviar" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button>
+            <button class="btn btn-primary boton_enviar" type="submit" data-bs-toggle="modals" data-bs-target="#exampleModals">Enviar</button>
           </section>
       </form>
     </div>
