@@ -18,8 +18,8 @@
   <!-- ### NAVEGACION #### -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand ipsst_ancla" href="#">
-        <img src="/img/logo.gif" alt="">
+      <a class="navbar-brand ipsst_ancla" href="https://ipsst.gov.ar/">
+        <img src="/img/logo.gif" alt="Logo ipsst" title="Logo del IPSST">
         IPSST</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +28,7 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-decoration-underline" aria-current="page" href="#">Volver al sitio principal</a>
+            <a class="nav-link active text-decoration-underline" aria-current="page" href="https://ipsst.gov.ar/" title="Vovler al Sitio Principal">Volver al sitio principal</a>
           </li>
         </ul>
       </div>
@@ -47,27 +47,27 @@
         <div class="row gap-4 gap-lg-0">
           <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-nombre" class="form-label">Nombres del afectado *</label>
-            <input type="text" id="lbl-nombre" class="form-control" placeholder="Escribir nombres del afectado/a" name="nombres" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" minlength="3" maxlength="30" required>
+            <input type="text" id="lbl-nombre" class="form-control" placeholder="Juan Carlos" name="nombres" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" minlength="3" maxlength="30" required>
           </section>
           <section class="col-12 col-lg-6">
             <label for="lbl-apellido" class="form-label">Apellidos del afectado *</label>
-            <input type="text" id="lbl-apellido" class="form-control" placeholder="Escribir apellidos del afectado/a" name="apellidos" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" minlength="3" maxlength="30" required>
+            <input type="text" id="lbl-apellido" class="form-control" placeholder="Gomez" name="apellidos" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" minlength="3" maxlength="30" required>
           </section>
           <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-email" class="form-label">Email *</label>
-            <input type="email" id="lbl-email" class="form-control" placeholder="Introduzca email" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" name="email" required>
+            <input type="email" id="lbl-email" class="form-control" placeholder="nombre@ejemplo.com" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" name="email" required>
           </section>
           <section class="col-12 col-lg-6">
             <label for="lbl-cuil" class="form-label">Cuil *</label>
-            <input type="number" id="lbl-cuil" class="form-control" placeholder="Introducir número de cuil" name="cuil" required>
+            <input type="number" id="lbl-cuil" class="form-control" placeholder="Solo numeros" name="cuil" required>
           </section>
           <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-celular" class="form-label">Telefono celular *</label>
-            <input type="number" id="lbl-celular" class="form-control" placeholder="Introducir numero de celular" name="celular" required>
+            <input type="number" id="lbl-celular" class="form-control" placeholder="Sin 0 y sin 15" name="celular" required>
           </section>
           <section class="col-12 col-lg-6">
             <label for="lbl-fijo" class="form-label">Telefono fijo <small>(opcional)</small></label>
-            <input type="number" id="lbl-fijo" class="form-control" placeholder="Introducir numero telefono fijo (opcional)" name="fijo">
+            <input type="number" id="lbl-fijo" class="form-control" placeholder="Numero tel. fijo (opcional)" name="fijo">
           </section>
           <section class="col-12 col-lg-6 mb-lg-4">
             <label for="lbl-horario" class="form-label">Indicar horario donde podemos llamarlo *</label>
@@ -123,15 +123,15 @@
           </section>
          <section class="d-none col-12 col-lg-6 mb-lg-4 nombreDenunciante">
             <label for="lbl-denunciante" class="form-label">Nombres completo del denunciante *</label>
-            <input type="text" id="lbl-denunciante" class="form-control" placeholder="Escribir nombre del denunciante" name="nombreDenunciante" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+            <input type="text" id="lbl-denunciante" class="form-control" placeholder="Maria Rodriguez" name="nombreDenunciante" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
           </section>
           <section class="d-none col-12 col-lg-6 mb-lg-4 cuilDenunciante ">
             <label for="lbl-cuilDenunciante" class="form-label">CUIL denunciante *</label>
-            <input type="number" id="lbl-cuilDenunciante" class="form-control" placeholder="Escribir nombres del afectado/a" name="cuilDenunciante">
+            <input type="number" id="lbl-cuilDenunciante" class="form-control" placeholder="Solo numeros" name="cuilDenunciante">
           </section> 
           <section class="col-12 d-flex flex-column align-items-center">
-            <label for="lbl-situacion" class="form-label">Explique situación *</label>
-            <textarea class="form-control" id="lbl-situacion" rows="9" placeholder="Explique la situación brevemente" name="situacion" minlength="10" maxlength="800" required></textarea>
+            <label for="lbl-situacion" class="form-label">Explique el motivo de la denuncia *</label>
+            <textarea class="form-control" id="lbl-situacion" rows="9" placeholder="Comente la situación brevemente" name="situacion" minlength="10" maxlength="800" required></textarea>
           </section>
         </div>
           <section class="d-flex justify-content-center mt-5">
@@ -154,7 +154,7 @@
           </div>
           <h2 class="text-center">DENUNCIA REGISTRADA</h2>
           <p>Su denuncia fue enviada, un operador del IPSST se pondrá en contacto con usted telefónicamente o vía mail.</p>
-          <p class="fst-italic">Para mas información comunicarse al <b>0800-111-2222</b></p>
+          <p class="fst-italic">Para mas información comunicarse al <b>0800-122-4777</b></p>
           <h3 class="text-center">Muchas gracias</h3>
         </article>
         <div class="modal-footer border-0">
@@ -165,8 +165,11 @@
   </div>
   <footer class="container_footer text-center py-3 mt-4">
     <p class="text-white">&copy Diseñado y desarrollado por Cabrera Nicolas Francisco </p>
-    <a href="#" class="text-white text-decoration-none">
+    <a href="https://github.com/nicofcabrera" target="_blank" class="text-white text-decoration-none">
       <i class="bi bi-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/nicolas-francisco-cabrera" target="_blank" class="text-white text-decoration-none">
+      <i class="bi bi-linkedin m-3"></i>
     </a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
