@@ -1,5 +1,6 @@
 // Función provisoria
 
+/*
 const afectado = document.getElementById('lbl-parentesco')
 afectado.addEventListener('change', () => {
   const nombreDenunciante = document.querySelector('.nombreDenunciante')
@@ -15,6 +16,7 @@ afectado.addEventListener('change', () => {
   }
 } 
 )
+*/
 
 
 // Otra idea de función es si existe tal variable creando nodos **probar en otro momento**
@@ -22,5 +24,7 @@ afectado.addEventListener('change', () => {
 // Funcion para envio de form
 
 const submitForm = () => {
-  alert('fucna')
+  const modalEnviar = document.getElementById('exampleModal')
+  modalEnviar.classList.add('show','d-block')
+
 }
