@@ -53,33 +53,48 @@
   <!-- ## FORMULARIO ## -->
   <main class="p-5">
     <div class="containers">
-      <form class="container_formulario mx-auto" onsubmit="submitForm();return false">
-        <div class="row gap-4 gap-lg-0">
-          <section class="col-12 col-lg-6 mb-lg-4">
+      <form class="container_formulario mx-auto needs-validation" onsubmit="submitForm();return false" id="formulario">
+        <div class="row gap-4 gap-md-0">
+          <section class="col-12 col-md-6 mb-md-4">
             <label for="lbl-nombre" class="form-label">Nombres del afectado *</label>
             <input type="text" id="lbl-nombre" class="form-control" placeholder="Juan Carlos" name="nombres" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" minlength="3" maxlength="30" required>
+            <p class="invalid-feedback m-0 p-0 text-end">
+              Campo obligatorio.
+            </p>
           </section>
-          <section class="col-12 col-lg-6">
+          <section class="col-12 col-md-6">
             <label for="lbl-apellido" class="form-label">Apellidos del afectado *</label>
             <input type="text" id="lbl-apellido" class="form-control" placeholder="Gomez" name="apellidos" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" minlength="3" maxlength="30" required>
+            <p class="invalid-feedback m-0 p-0 text-end">
+              Campo obligatorio.
+            </p>
           </section>
-          <section class="col-12 col-lg-6 mb-lg-4">
+          <section class="col-12 col-md-6 mb-md-4">
             <label for="lbl-email" class="form-label">Email *</label>
             <input type="email" id="lbl-email" class="form-control" placeholder="nombre@ejemplo.com" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" name="email" required>
+            <p class="invalid-feedback m-0 p-0 text-end">
+              Campo obligatorio.
+            </p>
           </section>
-          <section class="col-12 col-lg-6">
+          <section class="col-12 col-md-6">
             <label for="lbl-cuil" class="form-label">Cuil *</label>
-            <input type="number" id="lbl-cuil" class="form-control" placeholder="Solo numeros" name="cuil" required>
+            <input type="number" id="lbl-cuil" class="form-control" placeholder="Solo numeros" name="cuil" required min="1" max="2">
+            <p class="invalid-feedback m-0 p-0 text-end">
+              Campo obligatorio.
+            </p>
           </section>
-          <section class="col-12 col-lg-6 mb-lg-4">
+          <section class="col-12 col-md-6 mb-md-4">
             <label for="lbl-celular" class="form-label">Telefono celular *</label>
             <input type="number" id="lbl-celular" class="form-control" placeholder="Sin 0 y sin 15" name="celular" required>
+            <pp class="invalid-feedback m-0 p-0 text-end">
+              Campo obligatorio.
+            </pp>
           </section>
-          <section class="col-12 col-lg-6">
+          <section class="col-12 col-md-6">
             <label for="lbl-fijo" class="form-label">Telefono fijo <small>(opcional)</small></label>
             <input type="number" id="lbl-fijo" class="form-control" placeholder="Numero tel. fijo (opcional)" name="fijo">
           </section>
-          <section class="col-12 col-lg-6 mb-lg-4">
+          <section class="col-12 col-md-6 mb-md-4">
             <label for="lbl-horario" class="form-label">Indicar horario donde podemos llamarlo *</label>
              <select class="form-select" aria-label="Selccionar un horario" id="lbl-horario" name="horario" required>
                <option value="" selected>Selccionar un horario</option>
@@ -87,8 +102,11 @@
                <option value="14-17">14hs - 17hs</option>
                <option value="17-21">17hs - 21hs</option>
              </select>
+              <pp class="invalid-feedback m-0 p-0 text-end">
+                Campo obligatorio.
+              </pp>
           </section>
-          <section class="col-12 col-lg-6">
+          <section class="col-12 col-md-6">
             <label for="lbl-localidad" class="form-label">Localidad *</label>
              <select class="form-select" aria-label="Selccionar localidad" id="lbl-localidad" name="localidad" required>
                <option value="" selected>Selccionar localidad</option>
@@ -110,8 +128,11 @@
                <option value="la-cocha">La Cocha</option>
                <option value="a-valle">Amaicha del valle</option>
              </select>
+              <pp class="invalid-feedback m-0 p-0 text-end">
+                Campo obligatorio.
+              </pp>
           </section>
-          <section class="col-12 col-lg-6 mb-lg-4">
+          <section class="col-12 col-md-6 mb-md-4">
             <label for="lbl-denuncia" class="form-label">Tipo de denuncia *</label>
             <select class="form-select" aria-label="Seleccionar una opción" id="lbl-denuncia" name="tipo" required>
               <option value="" selected>Selccionar una opción</option>
@@ -121,8 +142,11 @@
               <option value="otros">Inconveniente con una atención médica o algun trámite en la obra social.</option>
               <option value="otros">Mala atención en la obra social y/o consultorios médicos.</option>
             </select>
+            <pp class="invalid-feedback m-0 p-0 text-end">
+              Campo obligatorio.
+            </pp>
           </section>
-          <section class="col-12 col-lg-6 lala">
+          <section class="col-12 col-md-6 lala">
             <label for="lbl-parentesco" class="form-label">El afectado/a, ¿es el titular de la obra social? *</label>
             <select class="form-select" aria-label="Selccionar una opción" id="lbl-parentesco" name="parentesco" required>
               <option value="" selected>Selccionar una opción</option>
@@ -130,22 +154,28 @@
               <option value="hijo">Hijo/a</option>
               <option value="conyuge">Cónyuge</option>
             </select>
+            <p class="invalid-feedback m-0 p-0 text-end">
+              Campo obligatorio.
+            </p>
           </section>
-         <section class="d-none col-12 col-lg-6 mb-lg-4 nombreDenunciante">
+         <section class="d-none col-12 col-md-6 mb-md-4 nombreDenunciante">
             <label for="lbl-denunciante" class="form-label">Nombres completo del denunciante *</label>
             <input type="text" id="lbl-denunciante" class="form-control" placeholder="Maria Rodriguez" name="nombreDenunciante" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
           </section>
-          <section class="d-none col-12 col-lg-6 mb-lg-4 cuilDenunciante ">
+          <section class="d-none col-12 col-md-6 mb-md-4 cuilDenunciante ">
             <label for="lbl-cuilDenunciante" class="form-label">CUIL denunciante *</label>
             <input type="number" id="lbl-cuilDenunciante" class="form-control" placeholder="Solo numeros" name="cuilDenunciante">
           </section> 
           <section class="col-12 d-flex flex-column align-items-center">
             <label for="lbl-situacion" class="form-label">Explique el motivo de la denuncia *</label>
             <textarea class="form-control" id="lbl-situacion" rows="9" placeholder="Comente la situación brevemente" name="situacion" minlength="10" maxlength="800" required></textarea>
+            <p class="invalid-feedback m-0 p-0 text-center">
+              Campo obligatorio.
+            </p>
           </section>
         </div>
           <section class="d-flex justify-content-center mt-5">
-            <button class="btn btn-primary boton_enviar" type="submit">Enviar</button>
+            <button class="btn btn-primary boton_enviar" type="submit" onclick="enviar()">Enviar</button>
           </section>
       </form>
     </div>

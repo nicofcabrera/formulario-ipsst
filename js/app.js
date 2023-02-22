@@ -32,3 +32,10 @@ const submitForm = () => {
   capaOpacity.classList.replace('d-none','d-block')
   modalEnviar.classList.add('show', 'd-block')
 }
+
+// Funcion para validacion
+const enviar = () => {
+  console.log('funcion')
+  const formulario = document.getElementById('formulario');
+  formulario.classList.add('was-validated')
+}
