@@ -33,7 +33,7 @@ const submitForm = () => {
   modalEnviar.classList.add('show', 'd-block')
 }
 
-// Funcion para validacion
+// Funcion para validacion colores inputs
 const enviar = () => {
   console.log('funcion')
   const formulario = document.getElementById('formulario');

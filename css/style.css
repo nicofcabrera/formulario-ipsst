@@ -25,8 +25,18 @@ h1{
   font-family: var(--font-secundario);
 }
 /* FORMULARIO */
+.campos_obligatorios{
+  font-size: .8rem;
+  width: 95%;
+  font-weight: 300;
+}
+
 .container_formulario{
   max-width: 700px;
+}
+
+.btn, .btn-info{
+  transition: all .3s linear;
 }
 
 .boton_enviar{
