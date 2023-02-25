@@ -41,12 +41,12 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link active text-decoration-underline" aria-current="page" href="/html/automatico.html"
-          title="Ver demo desconocimiento automatico">Demo desc. automatico</a>
+        <a class="nav-link active text-decoration-underline" aria-current="page" href="/index.html"
+          title="Ver demo denuncia manual">Demo denuncia manual</a>
       </li>
       <li class="nav-item">
         <a class="nav-link active text-decoration-underline" aria-current="page" href="https://ipsst.gov.ar/"
-          title="Vovler al Sitio Principal">Volver al sitio principal</a>
+          title="Vovler al Sitio Principal">Volver a la web principal</a>
       </li>
     </ul>
   </div>
@@ -56,7 +56,7 @@
   <!--### HEADER ### -->
   <header class="pt-2">
     <div class="d-flex justify-content-center">
-      <h1 class="text-center border-top border-bottom mt-4 mb-4">AUTOMATICO</h1>
+      <h1 class="text-center border-top border-bottom mt-4 mb-4">DENUNCIA</h1>
     </div>
     <div class="campos_obligatorios mx-auto">
       <p class="m-0 p-0 text-end campos_obligatorios text-white fst-italic">Campos obligatorios *</p>
@@ -65,41 +65,62 @@
 
   <!-- ## FORMULARIO ## -->
   <main class="p-5">
-    <div class="containers">
       <form class="container_formulario mx-auto needs-validation" onsubmit="submitForm();return false" id="formulario">
         <div class="row gap-4 gap-md-0">
+          <section class="col-12 mb-md-4">
+            <p class="text-center text-white">Email recibido</p>
+            <figure class="text-center">
+              <img src="/img/img_desconocimiento.png" class="img-fluid" alt="Imagen de desconocimiento de consumo" title="Imagen automatica generada por la notificacion via mail.">
+            </figure>
+          </section>
           <section class="col-12 col-md-6 mb-md-4">
             <label for="lbl-nombre" class="form-label">Nombres del afectado *</label>
-            <input type="text" id="lbl-nombre" class="form-control" placeholder="Juan Carlos" name="nombres"
-              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" minlength="3" maxlength="30" title="Introducir nombre sin simbolos."
-              required>
+            <input type="text" id="lbl-nombre" class="form-control" value="Juan Carlos" name="nombres"
+              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" minlength="3" maxlength="30" title="Nombres generado automaticamente por notificacion via mail." disabled required>
             <p class="invalid-feedback m-0 p-0 text-end">
               Campo obligatorio.
             </p>
           </section>
           <section class="col-12 col-md-6">
             <label for="lbl-apellido" class="form-label">Apellidos del afectado *</label>
-            <input type="text" id="lbl-apellido" class="form-control" placeholder="Gomez" name="apellidos"
+            <input type="text" id="lbl-apellido" class="form-control" value="Gomez" name="apellidos"
               pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" minlength="3" maxlength="30"
-              title="Introducir apellidos sin simbolos." required>
+              title="Apellido generado automaticamente por notificacion via mail." disabled required>
             <p class="invalid-feedback m-0 p-0 text-end">
               Campo obligatorio.
             </p>
           </section>
           <section class="col-12 col-md-6 mb-md-4">
             <label for="lbl-email" class="form-label">Email *</label>
-            <input type="email" id="lbl-email" class="form-control" placeholder="nombre@ejemplo.com"
-              pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" name="email" title="Introducir en formato email" required>
+            <input type="email" id="lbl-email" class="form-control" value="nombre@ejemplo.com"
+              pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" name="email" title="Email generado automaticamente por notificacion via mail" disabled required>
             <p class="invalid-feedback m-0 p-0 text-end">
               Campo obligatorio.
             </p>
           </section>
           <section class="col-12 col-md-6">
-            <label for="lbl-cuil" class="form-label">Cuil *</label>
-            <input type="text" id="lbl-cuil" class="form-control" placeholder="Solo numeros" name="cuil" maxlength="11"
-              pattern="[0-9]{11}" required title="Solo acepta numeros">
+            <label for="lbl-cuil" class="form-label">Cuil del afectado *</label>
+            <input type="text" id="lbl-cuil" class="form-control" value="20123121237" name="cuil" maxlength="11"
+              pattern="[0-9]{11}" title="Cuil generado automaticamente por notificacion via mail" disabled required>
             <p class="invalid-feedback m-0 p-0 text-end">
               Solo acepta numeros hasta 11 caractares.
+            </p>
+          </section>
+          <section class="col-12 col-md-6 mb-md-4">
+            <label for="lbl-autorizacion" class="form-label">Nro de autorizacion</label>
+            <input type="text" id="lbl-autorizacion" class="form-control" value="19562233" name="cuil" maxlength="8"
+              pattern="[0-9]{8}" title="Nro autorizacion generado automaticamente por notificacion via mail" disabled required>
+            <p class="invalid-feedback m-0 p-0 text-end">
+              Solo acepta numeros hasta 11 caractares.
+            </p>
+          </section>
+          <section class="col-12 col-md-6">
+            <label for="lbl-medico" class="form-label">Medico involucrado *</label>
+            <input type="text" id="lbl-medico" class="form-control" value="BARRIOS JOSE" name="medico"
+              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" minlength="3" maxlength="30"
+              title="Medico generado automaticamente por notificacion via mail." disabled required>
+            <p class="invalid-feedback m-0 p-0 text-end">
+              Campo obligatorio.
             </p>
           </section>
           <section class="col-12 col-md-6 mb-md-4">
@@ -158,7 +179,7 @@
               Campo obligatorio.
             </p>
           </section>
-          <section class="col-12 col-md-6 mb-md-4">
+          <!-- <section class="col-12 col-md-6 mb-md-4">
             <label for="lbl-denuncia" class="form-label">Tipo de denuncia *</label>
             <select class="form-select" aria-label="Seleccionar una opción" id="lbl-denuncia" name="tipo"
               title="Seleccionar tipo de denuncia" required>
@@ -171,7 +192,7 @@
             <p class="invalid-feedback m-0 p-0 text-end">
               Campo obligatorio.
             </p>
-          </section>
+          </section> -->
           <section class="col-12 col-md-6 lala">
             <label for="lbl-parentesco" class="form-label">El afectado/a,¿es el titular de la obra social? *</label>
             <select class="form-select" aria-label="Selccionar una opción" id="lbl-parentesco" name="parentesco"
@@ -202,7 +223,7 @@
               Campo obligatorio.
             </p>
           </section>
-          <section class="col-12 d-flex flex-column align-items-center">
+          <section class="col-12 mt-md-4 d-flex flex-column align-items-center">
             <label for="lbl-situacion" class="form-label">Explique el motivo de la denuncia *</label>
             <textarea class="form-control" id="lbl-situacion" rows="9" placeholder="Comente la situación brevemente"
               name="situacion" minlength="10" maxlength="800" title="Introducir motivo de la denuncia"
@@ -216,7 +237,6 @@
           <button class="btn btn-primary boton_enviar" type="submit" onclick="enviar()">Enviar</button>
         </section>
       </form>
-    </div>
   </main>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -224,7 +244,7 @@
       <div class="modal-content">
         <div class="modal-header border-0">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-          <a type="button" class="btn-close" href="index.html"></a>
+          <a type="button" class="btn-close" href="/index.html"></a>
         </div>
         <article class="modal-body p-4">
           <div class="container_check d-flex justify-content-center align-items-center mx-auto mb-3">
@@ -237,7 +257,7 @@
           <h3 class="text-center">Muchas gracias</h3>
         </article>
         <div class="modal-footer border-0">
-          <a href="index.html" class="text-black">Imprimir comprobante</a>
+          <a href="/index.html" class="text-black">Imprimir comprobante</a>
         </div>
       </div>
     </section>
